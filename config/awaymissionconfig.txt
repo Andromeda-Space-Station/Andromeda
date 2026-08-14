@@ -1,0 +1,25 @@
+#Перечислите здесь возможные случайные Z-уровни.
+#Карты должны содержать полный путь к ним.
+#Карты должны быть размером не более 255x255 и иметь границы. Падение за край карты приведёт к неопределённому поведению.
+#УКАЗАНИЕ НЕВЕРНОЙ КАРТЫ ПРИВЕДЁТ К ЗАДЕРЖКАМ ИГРЫ ПРИ НАЧАЛЕ
+
+#!!ВАЖНЫЕ ЗАМЕЧАНИЯ ПО РАЗМЕЩЕНИЮ ВЫЕЗДНЫХ МИССИЙ!!:
+#НЕ ОТМЕЧАЙТЕ карты во время компиляции — игра использует этот список, чтобы решить, какую карту загрузить. Отметка карт приведёт к их одновременной загрузке ВСЕХ.
+#ОБЯЗАТЕЛЬНО ОТМЕТЬТЕ соответствующий файл кода для включаемой вами выездной миссии. В противном случае карта будет пытаться ссылаться на несуществующие объекты, что приведёт к ошибкам во время выполнения!
+
+_maps/RandomZLevels/TheBeach.dmm
+_maps/RandomZLevels/moonoutpost19.dmm
+#_maps/RandomZLevels/undergroundoutpost45.dmm
+_maps/RandomZLevels/caves.dmm
+_maps/RandomZLevels/snowdin.dmm
+_maps/RandomZLevels/research.dmm
+_maps/RandomZLevels/SnowCabin.dmm
+_maps/RandomZLevels/museum.dmm
+
+# Nova Away Missions
+#_maps/RandomZLevels/mothership_astrum.dmm
+_maps/RandomZLevels/heretic.dmm
+_maps/RandomZLevels/maintsroom.dmm
+
+# Howling Void Missions
+_maps/RandomZLevels/gulag-icemoon.dmm

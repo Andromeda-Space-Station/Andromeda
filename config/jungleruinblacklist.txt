@@ -1,0 +1,9 @@
+# Указанные здесь карты будут исключены из генерации на ледяной луне.
+# Карты должны быть указаны полным путём к ним
+# Список карт, доступных для исключения, можно найти в _maps\RandomRuins\JungleRuins
+# УКАЗАНИЕ НЕСУЩЕСТВУЮЩЕЙ КАРТЫ ПРИВЕДЁТ К ОШИБКАМ ПРИ ЗАПУСКЕ ИГРЫ
+
+#_maps/RandomRuins/AnywhereRuins/fountain_hall.dmm
+#_maps/RandomRuins/JungleRuins/caves_trilogy_research.dmm
+#_maps/RandomRuins/JungleRuins/surface_blooddraw.dmm
+#_maps/RandomRuins/JungleRuins/surface_luna.dmm

@@ -1,0 +1,110 @@
+Этот файл содержит список карт для использования в ротации карт.
+
+# Строки, начинающиеся с #, игнорируются.
+# Строки вне блоков map также игнорируются.
+# Дублирующиеся записи используют последнюю версию.
+# Все пробелы в начале и конце строк игнорируются (включая отступы, они только для визуального оформления)
+
+Формат:
+#map [название карты] (имя .json файла в папке _maps без части .json)
+	minplayers [число] (0 или меньше отключает это требование)
+	maxplayers [число] (0 или меньше отключает это требование)
+	default (последняя карта с этой настройкой получит все голоса игроков, которые не выбрали конкретную карту)
+	voteweight [число] (вес голоса, по умолчанию 1, 0.5 = полголоса, 2 = двойной вес и т.д., 0 = отключает карту, но позволяет игрокам выбирать её)
+	disabled (отключает карту)
+	votable (карта доступна для голосования)
+	feedbacklink (ссылка в игре для оставления отзывов о карте)
+	webmap_url (ссылка на веб-карту для просмотра в браузере)
+endmap
+
+#################
+# Карты Станций #
+#################
+
+map deltastation
+	votable
+endmap
+
+map icebox
+	votable
+endmap
+
+map catwalkstation
+	votable
+endmap
+
+map metastation
+	votable
+endmap
+
+map tramstation
+	votable
+endmap
+
+map nebulastation
+	votable
+endmap
+
+map wawastation
+	votable
+endmap
+
+##NOVA SECTOR MAPS##
+
+map voidraptor
+	votable
+endmap
+
+map blueshift
+	minplayers 50
+	votable
+endmap
+
+map ouroboros
+	votable
+endmap
+
+map serenitystation
+	votable
+endmap
+
+map snowglobe
+	votable
+endmap
+
+map oceanpubby
+    votable
+endmap
+
+map border_station
+	votable
+endmap
+
+map athlantis
+	votable
+endmap
+
+map kurchatovsk
+	votable
+endmap
+
+map waterkilostation
+	votable
+endmap
+
+##############################
+# Станции только для отладки #
+##############################
+
+map gateway_test
+endmap
+
+map multiz_debug
+endmap
+
+map runtimestation
+endmap
+
+#Metastation, but with a json set to no space ruins.
+map meta_event
+endmap

@@ -1,0 +1,90 @@
+# Позволяет легко настроить количество позиций, разрешённых для каждой должности
+# Формат: [Название должности]=[всего позиций],[позиций при старте]
+# Названия должностей должны совпадать с переменной title каждого датума должности
+# Позиции можно установить на -1 для неограниченных слотов
+
+
+# Командование Станции
+
+Captain=1,1
+Head of Personnel=1,1
+Head of Security=1,1
+Chief Engineer=1,1
+Research Director=1,1
+Chief Medical Officer=1,1
+Quartermaster=1,1
+
+
+# Центральное Командование
+
+Nanotrasen Consultant=1,1
+Blueshield=1,1
+
+
+# Снабжение
+
+Cargo Technician=4,2
+Shaft Miner=4,4
+Customs Agent=2,2
+
+
+# Сервис
+
+Bartender=1,1
+Cook=2,1
+Barber=2,2
+Botanist=3,2
+Janitor=5,5
+Clown=1,1
+Mime=1,1
+Curator=2,2
+Lawyer=2,2
+Chaplain=1,1
+Psychologist=1,1
+Bouncer=2,2
+
+
+# Инженерный отдел
+
+Station Engineer=5,5
+Atmospheric Technician=3,2
+Engineering Guard=2,2
+
+
+# Медицинский отдел
+
+Medical Doctor=5,3
+Paramedic=3,2
+Chemist=2,2
+Geneticist=2,2
+Virologist=1,1
+Orderly=2,2
+
+
+# Научный отдел
+
+Scientist=5,5
+Roboticist=3,2
+Vanguard Operative=0,0
+Science Guard=2,2
+
+
+# Служба Безопасности
+
+Warden=1,1
+Detective=2,2
+Security Medic=1,1
+Security Officer=6,6
+Corrections Officer=2,1
+
+
+# Силиконы
+
+AI=1,1
+Cyborg=3,3
+
+
+# Прочее
+
+Assistant=-1,-1
+Prisoner=12,12
