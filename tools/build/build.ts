@@ -97,10 +97,7 @@ function walkFiles(
     return [];
   }
 
-  const {
-    extensions,
-    excludeDirs = new Set<string>(),
-  } = options;
+  const { extensions, excludeDirs = new Set<string>() } = options;
   const files: string[] = [];
   const stack = [root];
 
@@ -168,9 +165,7 @@ function getTguiWorkspaceSources() {
 }
 
 function getTrackedDmSubtypeFiles() {
-  return [
-    ...walkFiles('code', { extensions: new Set(['.dm']) }),
-  ];
+  return [...walkFiles('code', { extensions: new Set(['.dm']) })];
 }
 
 function countTrackedSubtypes(fileContents: string) {
@@ -250,7 +245,7 @@ export const CutterTarget = new Juke.Target({
     const temp_path = `${cutter_path}_temp`; // yes this means its file extension is .exe_temp I don't really care
     await downloadFile(download_from, temp_path);
     fs.copyFileSync(temp_path, cutter_path);
-    fs.rmSync(temp_path)
+    fs.rmSync(temp_path);
     if (process.platform !== 'win32') {
       await Juke.exec('chmod', ['+x', cutter_path]);
     }
@@ -360,8 +355,8 @@ export const DmTarget = new Juke.Target({
   ],
   dependsOn: ({ get }) => [
     get(DefineParameter).includes('ALL_TEMPLATES') && DmMapsIncludeTarget,
-    get(DefineParameter).includes('NOVA_TEMPLATES') && DmMapsIncludeTarget, // NOVA EDIT ADDITION
-    !get(SkipIconCutter) && IconCutterTarget,
+    get(DefineParameter).includes('NOVA_TEMPLATES') && DmMapsIncludeTarget,
+    // !get(SkipIconCutter) && IconCutterTarget,
   ],
   inputs: ({ get }) => [
     '_maps/map_files/generic/**',
@@ -373,16 +368,12 @@ export const DmTarget = new Juke.Target({
     'sound/**',
     'tgui/public/**',
     'tgui/packages/tgfont/static/**',
-    ...(
-      get(DefineParameter).includes('ALL_TEMPLATES')
-        ? ['_maps/templates.dm']
-        : []
-    ),
-    ...(
-      get(DefineParameter).includes('NOVA_TEMPLATES')
-        ? ['_maps/templates_nova.dm']
-        : []
-    ),
+    ...(get(DefineParameter).includes('ALL_TEMPLATES')
+      ? ['_maps/templates.dm']
+      : []),
+    ...(get(DefineParameter).includes('NOVA_TEMPLATES')
+      ? ['_maps/templates_nova.dm']
+      : []),
     `${DME_NAME}.dme`,
     NamedVersionFile,
   ],
@@ -411,7 +402,7 @@ export const DmTestTarget = new Juke.Target({
   ],
   dependsOn: ({ get }) => [
     get(DefineParameter).includes('ALL_MAPS') && DmMapsIncludeTarget,
-    IconCutterTarget,
+    // IconCutterTarget,
   ],
   executes: async ({ get }) => {
     fs.copyFileSync(`${DME_NAME}.dme`, `${DME_NAME}.test.dme`);
@@ -453,8 +444,8 @@ export const AutowikiTarget = new Juke.Target({
     NoWarningParameter,
   ],
   dependsOn: ({ get }) => [
-    get(DefineParameter).includes('NOVA_TEMPLATES') && DmMapsIncludeTarget, // NOVA EDIT ADDITION
-    IconCutterTarget,
+    get(DefineParameter).includes('NOVA_TEMPLATES') && DmMapsIncludeTarget,
+    // IconCutterTarget,
   ],
   outputs: ['data/autowiki_edits.txt'],
   executes: async ({ get }) => {
@@ -591,7 +582,11 @@ export const ContentValidateTarget = new Juke.Target({
     ...getTrackedDmSubtypeFiles(),
   ],
   outputs: [CONTENT_VALIDATE_OUTPUT],
-  executes: () => bunRoot('tools/build/validate_content_manifests.mjs', CONTENT_VALIDATE_OUTPUT),
+  executes: () =>
+    bunRoot(
+      'tools/build/validate_content_manifests.mjs',
+      CONTENT_VALIDATE_OUTPUT,
+    ),
 });
 
 export const SubtypeReportTarget = new Juke.Target({
