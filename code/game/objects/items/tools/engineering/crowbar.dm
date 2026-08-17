@@ -279,8 +279,7 @@
 	desc = "A specialized version of the jaws of life, primarily to be used by paramedics to recover the injured and the recently deceased. Rather than a cutting arm, this tool has a bonesetting apparatus. \
 		Cannot access certain high security areas due to safety concerns."
 	icon_state = "jaws_paramedic"
-	inhand_icon_state = "jawsparamedic"
-	worn_icon_state = "jawsparamedic"
+	inhand_icon_state = "jaws_paramedic"
 	w_class = WEIGHT_CLASS_BULKY
 	toolspeed = 1
 	slot_flags = null
