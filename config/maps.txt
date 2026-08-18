@@ -37,56 +37,53 @@ map metastation
 	votable
 endmap
 
-map tramstation
-	votable
-endmap
+#map tramstation
+#	votable
+#endmap
 
-map nebulastation
-	votable
-endmap
+#map nebulastation
+#	votable
+#endmap
 
 map wawastation
 	votable
 endmap
 
-##NOVA SECTOR MAPS##
-
 map voidraptor
 	votable
 endmap
 
-map blueshift
-	minplayers 50
-	votable
-endmap
+#map blueshift
+#	votable
+#endmap
 
-map ouroboros
-	votable
-endmap
+#map ouroboros
+#	votable
+#endmap
 
-map serenitystation
-	votable
-endmap
+#map serenitystation
+#	votable
+#endmap
 
-map snowglobe
-	votable
-endmap
+#map snowglobe
+#	votable
+#endmap
 
 map oceanpubby
     votable
 endmap
 
-map border_station
-	votable
-endmap
+#map border_station
+#	votable
+#endmap
 
-map athlantis
-	votable
-endmap
+#map athlantis
+#	votable
+#endmap
 
-map kurchatovsk
-	votable
-endmap
+#map kurchatovsk
+#	votable
+#endmap
 
 map waterkilostation
 	votable
