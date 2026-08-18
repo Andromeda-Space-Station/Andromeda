@@ -1671,7 +1671,7 @@
 		'sound/voice/screammirage4.ogg',
 	)
 
-datum/emote/living/forthedjinn
+/datum/emote/living/forthedjinn
 	key = "forthedjinn"
 	key_third_person = "forthedjinn"
 	message = "восклицает `FOR THE DJINN!`"
