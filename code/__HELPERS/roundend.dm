@@ -235,6 +235,22 @@ GLOBAL_LIST_INIT(achievements_unlocked, list())
 	var/popcount = gather_roundend_feedback()
 	display_report(popcount)
 
+/**
+	var/list/round_data = list(
+		"type" = "round_end",
+		"round_id" = GLOB.round_id,
+		"map" = SSmapping.current_map?.return_map_name(),
+		"mode" = SSdynamic.current_tier.name,
+		"storyteller_mode" = SSstoryteller?.is_enabled() ? SSstoryteller.round_mode : null,
+		"shift_duration" = DisplayTimeText(world.time - SSticker.round_start_time),
+		"survivors" = popcount[POPCOUNT_SURVIVORS],
+		"escapees" = popcount[POPCOUNT_ESCAPEES],
+		"shuttle_escapees" = popcount[POPCOUNT_SHUTTLE_ESCAPEES],
+		"station_integrity" = popcount["station_integrity"]
+	)
+	a13_discord_end_round(round_data)
+ */
+
 	CHECK_TICK
 
 	/* ///NOVA EDIT START
@@ -311,6 +327,8 @@ GLOBAL_LIST_INIT(achievements_unlocked, list())
 	world.TgsTriggerEvent("tg-Roundend", wait_for_completion = TRUE)
 
 /datum/controller/subsystem/ticker/proc/standard_reboot()
+	// Discord bridge — restart
+//	a13_discord_end_round(list("type" = "restart", "reason" = "Round ended"))
 	if(ready_for_reboot)
 		if(GLOB.station_was_nuked)
 			Reboot("Station destroyed by Nuclear Device.", "nuke")

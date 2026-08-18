@@ -5608,6 +5608,7 @@
 #include "code\modules\digitigrade_cybernetics\mechfabricator_designs.dm"
 #include "code\modules\digitigrade_cybernetics\robot_bodyparts.dm"
 #include "code\modules\discord\accountlink.dm"
+#include "code\modules\discord\andromeda_centcom_bot.dm"
 #include "code\modules\discord\discord_embed.dm"
 #include "code\modules\discord\discord_link_record.dm"
 #include "code\modules\discord\howling_void_bot.dm"
