@@ -1658,8 +1658,8 @@
 /datum/emote/living/screammirage
 	key = "screammirage"
 	key_third_person = "screammirage"
-	message = "screams like a mirage!"
-	message_mime = "screams silently like a mirage!"
+	message = "кричит как Мираж!"
+	message_mime = "бесшумно кричит как Мираж!"
 	emote_type = EMOTE_AUDIBLE
 	specific_emote_audio_cooldown = 1.5 SECONDS
 
@@ -1674,7 +1674,7 @@
 datum/emote/living/forthedjinn
 	key = "forthedjinn"
 	key_third_person = "forthedjinn"
-	message = "lets out a `FOR THE DJINN!`"
+	message = "восклицает `FOR THE DJINN!`"
 	emote_type = EMOTE_AUDIBLE
 	sound = 'sound/voice/djinn.ogg'
 	specific_emote_audio_cooldown = 1.5 SECONDS
