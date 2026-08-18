@@ -1654,3 +1654,27 @@
 	emote_type = EMOTE_AUDIBLE
 	vary = TRUE
 	sound = 'sound/mobs/humanoids/shadekin/sound_voice_mar.ogg' // Credit to vorestation
+
+/datum/emote/living/screammirage
+	key = "screammirage"
+	key_third_person = "screammirage"
+	message = "кричит как Мираж!"
+	message_mime = "бесшумно кричит как Мираж!"
+	emote_type = EMOTE_AUDIBLE
+	specific_emote_audio_cooldown = 1.5 SECONDS
+
+/datum/emote/living/screammirage/get_sound(mob/living/user)
+	return pick(
+		'sound/voice/screammirage1.ogg',
+		'sound/voice/screammirage2.ogg',
+		'sound/voice/screammirage3.ogg',
+		'sound/voice/screammirage4.ogg',
+	)
+
+datum/emote/living/forthedjinn
+	key = "forthedjinn"
+	key_third_person = "forthedjinn"
+	message = "восклицает `FOR THE DJINN!`"
+	emote_type = EMOTE_AUDIBLE
+	sound = 'sound/voice/djinn.ogg'
+	specific_emote_audio_cooldown = 1.5 SECONDS
