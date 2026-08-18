@@ -462,6 +462,12 @@ ADMIN_VERB(cmd_controller_view_ui, R_SERVER|R_DEBUG, "Controller Overview", "Vie
 	to_chat(world, span_boldannounce("[msg]"), MESSAGE_TYPE_DEBUG)
 	log_world(msg)
 
+//	a13_discord_round_start(list(
+//		"type" = "round_start",
+//		"map" = SSmapping.current_map?.map_name,
+//		"round_id" = GLOB.round_id
+//	))
+
 
 	if(world.system_type == MS_WINDOWS && CONFIG_GET(flag/toast_notification_on_init) && !length(GLOB.clients))
 		world.shelleo("start /min powershell -ExecutionPolicy Bypass -File tools/initToast/initToast.ps1 -name \"[world.name]\" -icon %CD%\\icons\\ui_icons\\common\\tg_16.png -port [world.port]")
