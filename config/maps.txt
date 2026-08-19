@@ -85,9 +85,9 @@ endmap
 #	votable
 #endmap
 
-map waterkilostation
-	votable
-endmap
+#map waterkilostation
+#	votable
+#endmap
 
 ##############################
 # Станции только для отладки #
