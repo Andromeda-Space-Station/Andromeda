@@ -808,18 +808,33 @@
 	reaction_tags = REACTION_TAG_EASY | REACTION_TAG_UNIQUE
 
 /datum/chemical_reaction/metalgen_imprint/on_reaction(datum/reagents/holder, datum/equilibrium/reaction, created_volume)
-	var/datum/reagent/metalgen/metalgen = holder.has_reagent(/datum/reagent/metalgen)
-	for (var/datum/reagent/metal in holder.reagent_list)
-		if (!metal.material || metal.volume < 40)
+	// Находим металлген вручную, вместо has_reagent
+	var/datum/reagent/metalgen/metalgen
+	for(var/datum/reagent/R in holder.reagent_list)
+		if(istype(R, /datum/reagent/metalgen))
+			metalgen = R
+			break
+
+	if(!metalgen)
+		return
+
+	// Ищем реагент-металл, из которого будем делать imprint
+	for(var/datum/reagent/metal in holder.reagent_list)
+		// Пропускаем сами участники реакции
+		if(istype(metal, /datum/reagent/metalgen) || istype(metal, /datum/reagent/liquid_dark_matter))
+			continue
+		if(!metal.material || metal.volume < 40)
 			continue
 
+		// Записываем материал в data конкретного инстанса металлгена
 		metalgen.data["material"] = metal.material
 		holder.remove_reagent(metal.type, 40)
+
 		var/atom/container = holder.my_atom
 		var/area/container_area = get_area(container)
 		var/blame_msg = "with no known fingerprints"
 		var/lastkey = container.fingerprintslast
-		if (lastkey)
+		if(lastkey)
 			var/mob/scapegoat = get_mob_by_key(lastkey)
 			blame_msg = "last touched by [ADMIN_LOOKUPFLW(scapegoat)]"
 
