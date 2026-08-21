@@ -473,6 +473,7 @@
 	desc = "A tool for cutting boxes, or throats."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "boxcutter"
+	worn_icon_state = "pen"
 	inhand_icon_state = "boxcutter"
 	base_icon_state = "boxcutter"
 	icon_angle = -90
