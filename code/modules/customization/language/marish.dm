@@ -13,5 +13,5 @@
 	name = "Empathy"
 	desc = "Shadekin seem to always know what the others are thinking. This is probably why."
 	key = "9"
-	secret = TRUE
+	secret = FALSE
 	icon_state = "empathy"

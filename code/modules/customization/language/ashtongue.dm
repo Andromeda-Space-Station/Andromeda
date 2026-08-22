@@ -32,7 +32,7 @@
 	icon_state = "ashtongue"
 	icon = 'icons/misc/language.dmi'
 	default_priority = 90
-	secret = TRUE
+	secret = FALSE
 
 	mutual_understanding = list(
 	/datum/language/draconic = 70,
