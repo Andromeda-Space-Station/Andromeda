@@ -358,7 +358,7 @@
 	secret = TRUE
 
 /datum/language/calcic
-	secret = TRUE
+	secret = FALSE
 
 /datum/language/codespeak
 	secret = TRUE
@@ -376,7 +376,7 @@
 	secret = TRUE
 
 /datum/language/nekomimetic
-	secret = TRUE
+	secret = FALSE
 
 /datum/language/shadowtongue
 	secret = TRUE
