@@ -45,6 +45,7 @@
 		/obj/item/clothing/suit/armor/vest/hc_police = ITEM_WEIGHT_ARMOR,
 		// Weapons
 		/obj/item/gun/ballistic/revolver/shotgun_revolver = ITEM_WEIGHT_GUN_COMMON,
+		/obj/item/gun/ballistic/revolver/shotgun_revolver_RSH12 = ITEM_WEIGHT_GUN_COMMON,
 		/obj/item/gun/ballistic/automatic/pistol/plasma_thrower = ITEM_WEIGHT_GUN_COMMON,
 		/obj/item/gun/ballistic/automatic/pistol/plasma_marksman = ITEM_WEIGHT_GUN_COMMON,
 		/obj/item/storage/toolbox/guncase/soviet/sakhno = ITEM_WEIGHT_GUN_COMMON,

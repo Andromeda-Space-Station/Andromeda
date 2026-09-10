@@ -155,6 +155,13 @@
 	express_lock = FALSE
 	order_flags = ORDER_COMPANY
 
+/datum/supply_pack/companies/ballistics/hc_surplus/shotgun_revolver_RSH12
+	contains = list(/obj/item/gun/ballistic/revolver/shotgun_revolver_RSH12)
+	access = FALSE
+	access_view = FALSE
+	express_lock = FALSE
+	order_flags = ORDER_COMPANY
+
 /datum/supply_pack/companies/ballistics/hc_surplus/zashch
 	contains = list(/obj/item/gun/ballistic/automatic/pistol/zashch)
 	access = FALSE

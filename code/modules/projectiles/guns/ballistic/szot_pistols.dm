@@ -119,6 +119,34 @@
 /obj/item/gun/ballistic/revolver/shotgun_revolver/give_manufacturer_examine()
 	AddElement(/datum/element/manufacturer_examine, COMPANY_SZOT)
 
+// Новая пушка RSH12 по запросу Воздуха, просто рескин бобра по сути
+
+/obj/item/gun/ballistic/revolver/shotgun_revolver_RSH12
+	name = "\improper RSH12 12g Shotgun Revolver"
+	desc = "A rugged, full-steel revolver chambered for four 12-gauge shells.\
+	Built with a reinforced barrel shroud and vented to manage recoil,\
+	it's a straightforward tool for those who value stopping power over subtlety"
+	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/cylinder/rev12ga
+	recoil = SAWN_OFF_RECOIL
+	weapon_weight = WEAPON_MEDIUM
+
+	lefthand_file = 'icons/mob/inhands/weapons/guns/szot_dynamica/guns_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/guns/szot_dynamica/guns_righthand.dmi'
+	inhand_icon_state = "RSH12"
+
+	icon = 'icons/obj/weapons/guns/szot_dynamica/guns_32.dmi'
+	icon_state = "RSH12"
+
+	fire_sound = 'sound/sec_haul/revolver_fire.ogg'
+	spread = 15
+
+	lore_blurb = "The RSH-12 revolver is a fully steel-framed revolver with a swing-out cylinder to the left,\
+		holding 4 rounds of 12-gauge ammunition. Thanks to several design solutions, \
+		the recoil of the RSH-12 is no greater than that of many other large-caliber revolvers and pistols.\
+		The revolver features a hammer-fired action with an exposed hammer. Like many other revolvers chambered for powerful cartridges,\
+		the RSH-12 has a reinforced barrel shroud equipped with ventilation ports to help manage heat and recoil."
+/obj/item/gun/ballistic/revolver/shotgun_revolver/give_manufacturer_examine()
+	AddElement(/datum/element/manufacturer_examine, COMPANY_SZOT)
 // A 10mm pistol that shoots slow as all get out, but has that deep dish magazine going on
 
 /obj/item/gun/ballistic/automatic/pistol/zashch
