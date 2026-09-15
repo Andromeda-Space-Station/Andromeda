@@ -102,6 +102,14 @@
 	name = "Beak"
 	icon_state = "bird"
 
+/datum/sprite_accessory/snouts/mammal/easterndragon
+    name = "Dragon Eastern (No Mustache)"
+    icon_state = "easterndnw"
+
+/datum/sprite_accessory/snouts/mammal/easterndragon/mustache
+    name = "Dragon Eastern (With Mustache)"
+    icon_state = "easterndw"
+
 /datum/sprite_accessory/snouts/mammal/birdsmall
 	name = "Beak (small)"
 	icon_state = "birdsmall"
